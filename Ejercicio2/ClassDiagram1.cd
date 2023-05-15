@@ -17,23 +17,16 @@
   <Class Name="Ejercicio2.Surtidor">
     <Position X="5.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
       <FileName>Surtidor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Ejercicio2.Nafta">
     <Position X="8" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Nafta.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="Ejercicio2.TipoDeNafta">
-    <Position X="10.25" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>TipoDeNafta.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
