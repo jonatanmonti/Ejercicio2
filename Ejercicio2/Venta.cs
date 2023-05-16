@@ -7,7 +7,6 @@ namespace Ejercicio2
 {
     public class Venta
     {
-
 		private double totalestacion;
 
 		public double TotalEstacion

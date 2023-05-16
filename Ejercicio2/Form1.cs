@@ -12,10 +12,8 @@ namespace Ejercicio2
 {
     public partial class Form1 : Form
     {
-
         private Venta VentaActual = null;
         
-
         public Form1()
         {
             InitializeComponent();

@@ -50,8 +50,6 @@ namespace Ejercicio2
             set { precioNaftaCargada = value; }
         }
 
-
-
         private int capacidad;
 
         public int Capacidad

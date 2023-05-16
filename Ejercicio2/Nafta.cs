@@ -7,7 +7,6 @@ namespace Ejercicio2
 {
 	public class Nafta
 	{
-
 		private string tipo;
 
 		public string Tipo
@@ -15,7 +14,6 @@ namespace Ejercicio2
 			get { return tipo; }
 			set { tipo = value; }
 		}
-
 
 		private double precio;
 
