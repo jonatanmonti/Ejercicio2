@@ -25,15 +25,16 @@ namespace Ejercicio2
 			set { precio = value; }
 		}
 
-		public Nafta(string Tipo, double Precio)
+		public Nafta()
 		{
-			this.Tipo = Tipo;
-			this.Precio = Precio;
+			this.tipo = "";
+			this.precio = 0;
 		}
 
-		public string Visualizar
-		{
-			get { return Tipo + " $" + Precio.ToString(); }
-		}
-	}
+        public string Visualizar
+        {
+            get { return Tipo + " $" + Precio.ToString(); }
+        }
+
+    }
 }
