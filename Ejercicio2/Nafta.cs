@@ -24,5 +24,11 @@ namespace Ejercicio2
 			get { return precio; }
 			set { precio = value; }
 		}
+
+		public Nafta(string nombre, double precio)
+		{
+			this.tipo = nombre;
+			this.precio = precio;
+		}
     }
 }

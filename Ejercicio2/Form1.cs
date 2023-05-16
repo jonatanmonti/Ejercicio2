@@ -27,39 +27,21 @@ namespace Ejercicio2
             {
                 
                 if(i == 0) {
-                    Nafta Nafta = new Nafta();
-                    Nafta.Tipo = "Normal";
-                    Nafta.Precio = 17.20;
-                    Surtidor Surtidor = new Surtidor();
-                    Surtidor.Nombre = "Surtidor 1";
-                    Surtidor.Capacidad = 50;
-                    Surtidor.NombreNaftaCargada = Nafta.Tipo;
-                    Surtidor.PrecioNaftaCargada = Nafta.Precio;
+                    Nafta Nafta = new Nafta("Normal",17.20);
+                    Surtidor Surtidor = new Surtidor("Surtidor 1", 50, Nafta.Tipo,Nafta.Precio,50);
                     listBox1.Items.Add(Surtidor);
                     listBox1.DisplayMember = "Visualizar";
                 }else if(i == 1)
                 {
-                    Nafta Nafta = new Nafta();
-                    Nafta.Tipo = "Super";
-                    Nafta.Precio = 18.85;
-                    Surtidor Surtidor = new Surtidor();
-                    Surtidor.Nombre = "Surtidor 2";
-                    Surtidor.Capacidad = 50;
-                    Surtidor.NombreNaftaCargada = Nafta.Tipo;
-                    Surtidor.PrecioNaftaCargada = Nafta.Precio;
+                    Nafta Nafta = new Nafta("Super",18.85);
+                    Surtidor Surtidor = new Surtidor("Surtidor 2", 50, Nafta.Tipo, Nafta.Precio, 50);
                     listBox1.Items.Add(Surtidor);
                     listBox1.DisplayMember = "Visualizar";
                 }
                 else if(i == 2)
                 {
-                    Nafta Nafta = new Nafta();
-                    Nafta.Tipo = "Premium";
-                    Nafta.Precio = 21.30;
-                    Surtidor Surtidor = new Surtidor();
-                    Surtidor.Nombre = "Surtidor 3";
-                    Surtidor.Capacidad = 50;
-                    Surtidor.NombreNaftaCargada = Nafta.Tipo;
-                    Surtidor.PrecioNaftaCargada = Nafta.Precio;
+                    Nafta Nafta = new Nafta("Premium",21.30);
+                    Surtidor Surtidor = new Surtidor("Surtidor 3", 50, Nafta.Tipo, Nafta.Precio, 50);
                     listBox1.Items.Add(Surtidor);
                     listBox1.DisplayMember = "Visualizar";
                 }

@@ -60,7 +60,14 @@ namespace Ejercicio2
             set { capacidad = value; }
         }
 
-        
+        public Surtidor(string nombre, int cantidad, string nombreNaftaCargada,double precioNaftaCargada,int capacidad)
+        {
+            this.nombre = nombre;
+            this.cantidad = cantidad;
+            this.nombreNaftaCargada=nombreNaftaCargada;
+            this.precioNaftaCargada = precioNaftaCargada;
+            this.capacidad = capacidad;
+        }
 
         public string Visualizar
         {
