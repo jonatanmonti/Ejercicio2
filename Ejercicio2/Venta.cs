@@ -40,8 +40,10 @@ namespace Ejercicio2
 			set { naftaVenta = value; }
 		}
 
+        
 
-		public double CalcularTotal()
+
+        public double CalcularTotal()
 		{
 			return totalestacion = naftaCargar * naftaVenta.Precio;
 		}

@@ -31,7 +31,7 @@ namespace Ejercicio2
 			this.precio = 0;
 		}
 
-        public string Visualizar
+        public string VisualizarNafta
         {
             get { return Tipo + " $" + Precio.ToString(); }
         }

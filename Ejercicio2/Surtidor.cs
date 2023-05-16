@@ -49,7 +49,12 @@ namespace Ejercicio2
             this.cantidad = 0;
 		}
 
-		/*public string CargarSurtidores()
+        public string VisualizarSurtidor
+        {
+            get { return Nombre; }
+        }
+
+        /*public string CargarSurtidores()
 		{
             
             for (int i = 0; i <= 2; i++)
