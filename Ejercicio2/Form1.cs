@@ -33,8 +33,10 @@ namespace Ejercicio2
                     Surtidor Surtidor = new Surtidor();
                     Surtidor.Nombre = "Surtidor 1";
                     Surtidor.Capacidad = 50;
-                    listBox1.Items.Add(Nafta);
-                    listBox1.DisplayMember = "VisualizarNafta";
+                    Surtidor.NombreNaftaCargada = Nafta.Tipo;
+                    Surtidor.PrecioNaftaCargada = Nafta.Precio;
+                    listBox1.Items.Add(Surtidor);
+                    listBox1.DisplayMember = "Visualizar";
                 }else if(i == 1)
                 {
                     Nafta Nafta = new Nafta();
@@ -43,8 +45,10 @@ namespace Ejercicio2
                     Surtidor Surtidor = new Surtidor();
                     Surtidor.Nombre = "Surtidor 2";
                     Surtidor.Capacidad = 50;
-                    listBox1.Items.Add(Nafta);
-                    listBox1.DisplayMember = "VisualizarNafta";
+                    Surtidor.NombreNaftaCargada = Nafta.Tipo;
+                    Surtidor.PrecioNaftaCargada = Nafta.Precio;
+                    listBox1.Items.Add(Surtidor);
+                    listBox1.DisplayMember = "Visualizar";
                 }
                 else if(i == 2)
                 {
@@ -54,8 +58,10 @@ namespace Ejercicio2
                     Surtidor Surtidor = new Surtidor();
                     Surtidor.Nombre = "Surtidor 3";
                     Surtidor.Capacidad = 50;
-                    listBox1.Items.Add(Nafta);
-                    listBox1.DisplayMember = "VisualizarNafta";
+                    Surtidor.NombreNaftaCargada = Nafta.Tipo;
+                    Surtidor.PrecioNaftaCargada = Nafta.Precio;
+                    listBox1.Items.Add(Surtidor);
+                    listBox1.DisplayMember = "Visualizar";
                 }
             }
         }
@@ -63,10 +69,17 @@ namespace Ejercicio2
         private void button1_Click(object sender, EventArgs e)
         {
             VentaActual = new Venta();
+        }
 
-            VentaActual.NaftaCargar = int.Parse(maskedTextBox1.Text);
-            VentaActual.NaftaVenta = (Nafta)listBox1.SelectedItem;
-            label1.Text = "Total estacion: " + VentaActual.TotalEstacion.ToString();
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (VentaActual != null)
+            {
+                VentaActual.Cant = int.Parse(maskedTextBox1.Text);
+                VentaActual.SurtidorVenta = (Surtidor)listBox1.SelectedItem;
+                VentaActual.CalcularTotal();
+                label1.Text = "Total estacion: " + VentaActual.TotalEstacion.ToString();
+            }
         }
     }
 }

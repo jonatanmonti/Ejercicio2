@@ -34,6 +34,24 @@ namespace Ejercicio2
             }
 		}
 
+        private string nombreNaftaCargada;
+
+        public string NombreNaftaCargada
+        {
+            get { return nombreNaftaCargada; }
+            set { nombreNaftaCargada = value; }
+        }
+
+        private double precioNaftaCargada;
+
+        public double PrecioNaftaCargada
+        {
+            get { return precioNaftaCargada; }
+            set { precioNaftaCargada = value; }
+        }
+
+
+
         private int capacidad;
 
         public int Capacidad
@@ -42,59 +60,11 @@ namespace Ejercicio2
             set { capacidad = value; }
         }
 
-        public Surtidor()
-		{
-			this.nombre = "";
-			this.capacidad = 0;
-            this.cantidad = 0;
-		}
+        
 
-        public string VisualizarSurtidor
+        public string Visualizar
         {
-            get { return Nombre; }
+            get { return Nombre + ": " + nombreNaftaCargada + " $ " + precioNaftaCargada; }
         }
-
-        /*public string CargarSurtidores()
-		{
-            
-            for (int i = 0; i <= 2; i++)
-            {
-
-                if (i == 0)
-                {
-                    Nafta Nafta = new Nafta();
-                    Nafta.Tipo = "Normal";
-                    Nafta.Precio = 17.20;
-                    Surtidor Surtidor = new Surtidor();
-                    Surtidor.nombre = "Surtidor 1";
-                    Surtidor.capacidad = 50;
-                    Surtidor.cantidad = Surtidor.capacidad;
-                    
-                }
-                else if (i == 1)
-                {
-                    Nafta Nafta = new Nafta();
-                    Nafta.Tipo = "Super";
-                    Nafta.Precio = 18.85;
-                    Surtidor Surtidor = new Surtidor();
-                    Surtidor.nombre = "Surtidor 2";
-                    Surtidor.capacidad = 50;
-                    Surtidor.cantidad = Surtidor.capacidad;
-                    
-                }
-                else if (i == 2)
-                {
-                    Nafta Nafta = new Nafta();
-                    Nafta.Tipo = "Premium";
-                    Nafta.Precio = 21.30;
-                    Surtidor Surtidor = new Surtidor();
-                    Surtidor.nombre = "Surtidor 3";
-                    Surtidor.capacidad = 50;
-                    Surtidor.cantidad = Surtidor.capacidad;
-                    
-                }
-            }
-        }*/
-
     }
 }

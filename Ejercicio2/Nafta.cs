@@ -24,17 +24,5 @@ namespace Ejercicio2
 			get { return precio; }
 			set { precio = value; }
 		}
-
-		public Nafta()
-		{
-			this.tipo = "";
-			this.precio = 0;
-		}
-
-        public string VisualizarNafta
-        {
-            get { return Tipo + " $" + Precio.ToString(); }
-        }
-
     }
 }

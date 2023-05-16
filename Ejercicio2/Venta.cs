@@ -16,12 +16,12 @@ namespace Ejercicio2
 			set { totalestacion = value; }
 		}
 
-		private int naftaCargar;
+		private int cant;
 
-		public int NaftaCargar
+		public int Cant
 		{
-			get { return naftaCargar; }
-			set { naftaCargar = value; }
+			get { return cant; }
+			set { cant = value; }
 		}
 
 		private Surtidor surtidorVenta;
@@ -32,20 +32,9 @@ namespace Ejercicio2
 			set { surtidorVenta = value; }
 		}
 
-		private Nafta naftaVenta;
-
-		public Nafta NaftaVenta
-		{
-			get { return naftaVenta; }
-			set { naftaVenta = value; }
-		}
-
-        
-
-
         public double CalcularTotal()
 		{
-			return totalestacion = naftaCargar * naftaVenta.Precio;
+			return totalestacion += cant * surtidorVenta.PrecioNaftaCargada;
 		}
 
 	}
