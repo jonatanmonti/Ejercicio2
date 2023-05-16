@@ -34,7 +34,7 @@ namespace Ejercicio2
                     Surtidor.Nombre = "Surtidor 1";
                     Surtidor.Capacidad = 50;
                     listBox1.Items.Add(Nafta);
-                    listBox1.DisplayMember = "VisualizarSurtidor";
+                    listBox1.DisplayMember = "VisualizarNafta";
                 }else if(i == 1)
                 {
                     Nafta Nafta = new Nafta();
@@ -44,7 +44,7 @@ namespace Ejercicio2
                     Surtidor.Nombre = "Surtidor 2";
                     Surtidor.Capacidad = 50;
                     listBox1.Items.Add(Nafta);
-                    listBox1.DisplayMember = "VisualizarSurtidor";
+                    listBox1.DisplayMember = "VisualizarNafta";
                 }
                 else if(i == 2)
                 {
@@ -55,7 +55,7 @@ namespace Ejercicio2
                     Surtidor.Nombre = "Surtidor 3";
                     Surtidor.Capacidad = 50;
                     listBox1.Items.Add(Nafta);
-                    listBox1.DisplayMember = "VisualizarSurtidor";
+                    listBox1.DisplayMember = "VisualizarNafta";
                 }
             }
         }
