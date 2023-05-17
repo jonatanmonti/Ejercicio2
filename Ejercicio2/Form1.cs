@@ -13,36 +13,34 @@ namespace Ejercicio2
     public partial class Form1 : Form
     {
         private Venta VentaActual = null;
-        
+        EstacionServicio estacion = new EstacionServicio();
         public Form1()
         {
             InitializeComponent();
         }
 
+        void CrearNafta(string nombre, float precio)
+        {
+            Nafta Nafta = new Nafta(nombre,precio);
+            estacion.Naftas.Add(Nafta);
+            
+
+        }
+
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i<=2; i++)
+
+            CrearNafta("Normal", 17.20f);
+            CrearNafta("Super", 18.85f);
+            CrearNafta("Premium", 21.30f);
+
+            for (int i = 0; i < 3; i++)
             {
-                
-                if(i == 0) {
-                    Nafta Nafta = new Nafta("Normal",17.20);
-                    Surtidor Surtidor = new Surtidor("Surtidor 1", 50, Nafta.Tipo,Nafta.Precio,50);
-                    listBox1.Items.Add(Surtidor);
-                    listBox1.DisplayMember = "Visualizar";
-                }else if(i == 1)
-                {
-                    Nafta Nafta = new Nafta("Super",18.85);
-                    Surtidor Surtidor = new Surtidor("Surtidor 2", 50, Nafta.Tipo, Nafta.Precio, 50);
-                    listBox1.Items.Add(Surtidor);
-                    listBox1.DisplayMember = "Visualizar";
-                }
-                else if(i == 2)
-                {
-                    Nafta Nafta = new Nafta("Premium",21.30);
-                    Surtidor Surtidor = new Surtidor("Surtidor 3", 50, Nafta.Tipo, Nafta.Precio, 50);
-                    listBox1.Items.Add(Surtidor);
-                    listBox1.DisplayMember = "Visualizar";
-                }
+                Surtidor Surtidor = new Surtidor("Surtidor " + (i + 1).ToString(), 50, estacion.Naftas[i], 50);
+                listBox1.Items.Add(Surtidor);
+                listBox1.DisplayMember = "Visualizar";
             }
         }
 

@@ -7,5 +7,14 @@ namespace Ejercicio2
 {
     public class EstacionServicio
     {
-    }
+		private List<Nafta> naftas = new List<Nafta>();
+
+		public List<Nafta> Naftas
+		{
+			get { return naftas; }
+			
+		}
+
+		 
+	}
 }

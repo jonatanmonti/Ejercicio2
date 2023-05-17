@@ -58,18 +58,26 @@ namespace Ejercicio2
             set { capacidad = value; }
         }
 
-        public Surtidor(string nombre, int cantidad, string nombreNaftaCargada,double precioNaftaCargada,int capacidad)
+        private Nafta nafta;
+
+        public Nafta Nafta
+        {
+            get { return nafta; }
+            set { nafta = value; }
+        }
+
+
+        public Surtidor(string nombre, int cantidad, Nafta nafta,int capacidad)
         {
             this.nombre = nombre;
             this.cantidad = cantidad;
-            this.nombreNaftaCargada=nombreNaftaCargada;
-            this.precioNaftaCargada = precioNaftaCargada;
+            this.nafta = nafta;
             this.capacidad = capacidad;
         }
 
         public string Visualizar
         {
-            get { return Nombre + ": " + nombreNaftaCargada + " $ " + precioNaftaCargada; }
+            get { return Nombre + ": " + nafta.Tipo + " $ " + nafta.Precio.ToString(); }
         }
     }
 }

@@ -15,15 +15,15 @@ namespace Ejercicio2
 			set { tipo = value; }
 		}
 
-		private double precio;
+		private float precio;
 
-		public double Precio
+		public float Precio
 		{
 			get { return precio; }
 			set { precio = value; }
 		}
 
-		public Nafta(string nombre, double precio)
+		public Nafta(string nombre, float precio)
 		{
 			this.tipo = nombre;
 			this.precio = precio;
