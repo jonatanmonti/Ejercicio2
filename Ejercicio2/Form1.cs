@@ -21,6 +21,8 @@ namespace Ejercicio2
 
         void CrearNafta(string nombre, float precio)
         {
+            //creo el metodo para crear una nueva nafta
+
             Nafta Nafta = new Nafta(nombre,precio);
             estacion.Naftas.Add(Nafta);
             
@@ -30,26 +32,36 @@ namespace Ejercicio2
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            //uso el metodo CrearNafta y le asignamos los valores
+
             CrearNafta("Normal", 17.20f);
             CrearNafta("Super", 18.85f);
             CrearNafta("Premium", 21.30f);
 
+            //creo un for para cargar las 3 naftas a nuestra listbox
+
             for (int i = 0; i < 3; i++)
             {
+
+                //creo un nuevo surtidor
                 Surtidor Surtidor = new Surtidor("Surtidor " + (i + 1).ToString(), 50, estacion.Naftas[i], 50);
+                //agrego el surtidor a nuestra listbox
                 listBox1.Items.Add(Surtidor);
+                //visualizo de forma correcta los datos en el listbox
                 listBox1.DisplayMember = "Visualizar";
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //creo una venta
             VentaActual = new Venta();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (VentaActual != null)
+            
+            if (VentaActual != null) //valido si existe una venta
             {
                 VentaActual.Cant = int.Parse(maskedTextBox1.Text);
                 VentaActual.SurtidorVenta = (Surtidor)listBox1.SelectedItem;
