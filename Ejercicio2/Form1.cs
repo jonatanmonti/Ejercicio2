@@ -60,6 +60,7 @@ namespace Ejercicio2
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //boton para seleccionar la cantidad de litros que quiero cargar y calculo el total
             
             if (VentaActual != null) //valido si existe una venta
             {

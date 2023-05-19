@@ -66,7 +66,7 @@ namespace Ejercicio2
             set { nafta = value; }
         }
 
-
+        //constructor de surtidor
         public Surtidor(string nombre, int cantidad, Nafta nafta,int capacidad)
         {
             this.nombre = nombre;
@@ -74,7 +74,8 @@ namespace Ejercicio2
             this.nafta = nafta;
             this.capacidad = capacidad;
         }
-
+        
+        //usamos esto para visualizar la informacion de forma correcta en nuestar lista
         public string Visualizar
         {
             get { return Nombre + ": " + nafta.Tipo + " $ " + nafta.Precio.ToString(); }
