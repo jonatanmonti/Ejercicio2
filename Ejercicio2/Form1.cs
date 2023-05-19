@@ -64,8 +64,8 @@ namespace Ejercicio2
             
             if (VentaActual != null) //valido si existe una venta
             {
-                VentaActual.Cant = int.Parse(maskedTextBox1.Text);
-                VentaActual.SurtidorVenta = (Surtidor)listBox1.SelectedItem;
+                VentaActual.CantEstacion = int.Parse(maskedTextBox1.Text);
+                VentaActual.EstacionVenta = (Surtidor)listBox1.SelectedItem;
                 VentaActual.CalcularTotal();
                 label1.Text = "Total estacion: " + VentaActual.TotalEstacion.ToString();
             }

@@ -7,33 +7,40 @@ namespace Ejercicio2
 {
     public class Venta
     {
-		private double totalestacion;
 
-		public double TotalEstacion
-		{
-			get { return totalestacion; }
-			set { totalestacion = value; }
-		}
 
-		private int cant;
+        private Surtidor estacionVenta;
 
-		public int Cant
-		{
-			get { return cant; }
-			set { cant = value; }
-		}
+        public Surtidor EstacionVenta
+        {
+            get { return estacionVenta; }
+            set { estacionVenta = value; }
+        }
 
-		private Surtidor surtidorVenta;
+        private double totalestacion;
 
-		public Surtidor SurtidorVenta
-		{
-			get { return surtidorVenta; }
-			set { surtidorVenta = value; }
-		}
+        public double TotalEstacion
+        {
+            get { return totalestacion; }
+            set { totalestacion = value; }
+        }
+
+        private int cantEstacion;
+
+        public int CantEstacion
+        {
+            get { return cantEstacion; }
+            set { cantEstacion = value; }
+        }
 
         public double CalcularTotal()
+        {
+            return totalestacion += cantEstacion * estacionVenta.PrecioNaftaCargada;
+        }
+
+        public void CalcularTotalSurtidor()
 		{
-			return totalestacion += cant * surtidorVenta.PrecioNaftaCargada;
+			
 		}
 
 	}
