@@ -32,33 +32,52 @@ namespace Ejercicio2
             set { cantEstacion = value; }
         }
 
-        private float totalSurtidor;
+        private float totalSurtidor1;
 
-        public float TotalSurtidor
+        public float TotalSurtidor1
         {
-            get { return totalSurtidor; }
-            set { totalSurtidor = value; }
+            get { return totalSurtidor1; }
+            set { totalSurtidor1 = value; }
         }
 
-        private int cantSurtidor;
+        private float totalSurtidor2;
 
-        public int CantSurtidor
+        public float TotalSurtidor2
         {
-            get { return cantSurtidor; }
-            set { cantSurtidor = value; }
+            get { return totalSurtidor2; }
+            set { totalSurtidor2 = value; }
         }
+
+        private float totalSurtidor3;
+
+        public float TotalSurtidor3
+        {
+            get { return totalSurtidor3; }
+            set { totalSurtidor3 = value; }
+        }
+
 
         public float CalcularTotal()
         {
             
 
-            return totalestacion += cantEstacion * estacionVenta.Nafta.Precio;
+            return totalestacion += cantEstacion * estacionVenta.Nafta.Precio; //calculamos el total de la estacion
         }
 
-        public float CalcularTotalSurtidor()
+        public float CalcularTotalSurtidor1()
 		{
-            return totalSurtidor += cantSurtidor * estacionVenta.Nafta.Precio;
-		}
+            return totalSurtidor1 += CantEstacion * estacionVenta.Nafta.Precio; //calculamos el total del surtidor 1
+        }
+
+        public float CalcularTotalSurtidor2()
+        {
+            return totalSurtidor2 += CantEstacion * estacionVenta.Nafta.Precio; //calculamos el total del surtidor 2
+        }
+
+        public float CalcularTotalSurtidor3()
+        {
+            return totalSurtidor3 += CantEstacion * estacionVenta.Nafta.Precio; //calculamos el total del surtidor 3
+        }
 
 	}
 }

@@ -60,7 +60,7 @@ namespace Ejercicio2
         private void button2_Click(object sender, EventArgs e)
         {
             //boton para seleccionar la cantidad de litros que quiero cargar y calculo el total
-            
+
             if (VentaActual != null) //valido si existe una venta
             {
                 VentaActual.CantEstacion = int.Parse(maskedTextBox1.Text);
@@ -68,7 +68,20 @@ namespace Ejercicio2
                 VentaActual.CalcularTotal();
                 label1.Text = "Total estacion: " + VentaActual.TotalEstacion.ToString();
 
-                
+                if (listBox1.Items[0] == listBox1.SelectedItem) //if para indicar si el item seleccionado de la listbox es el primero
+                {
+                    VentaActual.CalcularTotalSurtidor1();
+                    label2.Text = "Total surtidor 1: " + VentaActual.TotalSurtidor1.ToString(); //calculamos el total del surtidor 1
+                } else if (listBox1.Items[1] == listBox1.SelectedItem) //if para indicar si el item seleccionado de la listbox es el segundo
+                {
+                    VentaActual.CalcularTotalSurtidor2(); //calculamos el total del surtidor 2
+                    label3.Text = "Total surtidor 2: " + VentaActual.TotalSurtidor2.ToString();
+                }
+                else //caso contrario es el tercero
+                {
+                    VentaActual.CalcularTotalSurtidor3(); //calculamos el total del surtidor 3
+                    label4.Text = "Total surtidor 3: " + VentaActual.TotalSurtidor3.ToString();
+                }
             }
         }
     }
