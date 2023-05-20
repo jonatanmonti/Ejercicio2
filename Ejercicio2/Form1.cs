@@ -25,8 +25,6 @@ namespace Ejercicio2
 
             Nafta Nafta = new Nafta(nombre,precio);
             estacion.Naftas.Add(Nafta);
-            
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -56,6 +54,7 @@ namespace Ejercicio2
         {
             //creo una venta
             VentaActual = new Venta();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -68,6 +67,8 @@ namespace Ejercicio2
                 VentaActual.EstacionVenta = (Surtidor)listBox1.SelectedItem;
                 VentaActual.CalcularTotal();
                 label1.Text = "Total estacion: " + VentaActual.TotalEstacion.ToString();
+
+                
             }
         }
     }

@@ -42,9 +42,9 @@ namespace Ejercicio2
             set { nombreNaftaCargada = value; }
         }
 
-        private double precioNaftaCargada;
+        private float precioNaftaCargada;
 
-        public double PrecioNaftaCargada
+        public float PrecioNaftaCargada
         {
             get { return precioNaftaCargada; }
             set { precioNaftaCargada = value; }
